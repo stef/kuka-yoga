@@ -1,0 +1,14 @@
+* KUKA yoga
+
+This KUKA Robot Language (KRL) program demoes how to control a KUKA robot from
+an external source (like another computer or arduino) over a serial port, which
+triggers an interrupt, additionally it contains a pseudo random number
+generator.
+
+The program makes a KR C2 sweep around touching 16 predefined points until it
+receives a "1" on the 3rd serial port, then it switches to moving randomly
+between 4 points always pointing in the same direction. Going back to the
+sweeping around movement is done by sending a "0" on the serial port.
+
+The serial port configuration is mostly irrelevant, the only important
+detail is that it should be the same on both the KUKA and the other end.
